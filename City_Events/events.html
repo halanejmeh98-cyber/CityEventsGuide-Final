@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>City Events Guide - All Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CityEventsGuide-Final/css/style.css">
+</head>
+
+<body class="container-fluid p-0">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/CityEventsGuide-Final/index.html">
+                    <img src="/CityEventsGuide-Final/images/cityevents-logo.png" alt="City Events Guide Logo" height="100" class="d-inline-block align-text-top me-2">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="/CityEventsGuide-Final/index.html" data-key="nav_home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/CityEventsGuide-Final/events.html" data-key="nav_events">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/CityEventsGuide-Final/about.html" data-key="nav_about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/CityEventsGuide-Final/contact.html" data-key="nav_contact">Contact</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="lang-switcher">EN/AR</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid bg-light py-2 text-center border-bottom">
+        <div class="container">
+            <small class="text-muted">
+                <span data-key="contributor_title">**Project Contributors**</span>: 
+                <span class="text-dark fw-bold" data-key="contributor_hala_name">Hala Nejmeh</span> (ID: hala_274110), 
+                <span class="text-dark fw-bold" data-key="contributor_thaer_name">Thaer Shaarieh</span> (ID: thaer_291821), 
+                <span class="text-dark fw-bold" data-key="contributor_hani_name">Hani Abbas</span> (ID: hani_286646).
+                <span data-key="contributor_course">**Course**</span>: BWP401 | 
+                <span data-key="contributor_instructor">**Instructor**</span>: Dr. Bassel Al-Khateeb
+            </small>
+        </div>
+    </div>
+
+    <main>
+        <div class="container my-5 py-3">
+            <h1 class="display-3 text-primary mb-5" data-key="events_page_title">Upcoming City Events</h1>
+
+            <div class="row g-4">
+                
+                <div class="col-lg-3">
+                    <div class="card p-3 sticky-top" style="top: 20px;">
+                        <h5 class="card-title mb-3" data-key="filter_title">Filter Events</h5>
+                        <div class="mb-3">
+                            <label for="eventCategory" class="form-label" data-key="filter_category">Category:</label>
+                            <select class="form-select" id="eventCategory">
+                                <option value="all" data-key="filter_all">All Categories</option>
+                                <option value="music" data-key="filter_music">Music</option>
+                                <option value="art" data-key="filter_art">Arts & Culture</option>
+                                <option value="food" data-key="filter_food">Food & Drink</option>
+                                <option value="sport" data-key="filter_sport">Sport</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventDate" class="form-label" data-key="filter_date">Date Range:</label>
+                            <input type="date" class="form-control" id="eventDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventSearch" class="form-label" data-key="filter_search">Search:</label>
+                            <input type="text" class="form-control" id="eventSearch" placeholder="Search by title or location">
+                        </div>
+                        <button class="btn btn-primary" id="applyFilters" data-key="filter_apply">Apply Filters</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-9" id="eventsList">
+                    
+                    <div class="card mb-4 event-card" data-category="music" data-date="2025-07-20">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/CityEventsGuide-Final/images/music-fest.jpg" class="img-fluid rounded-start h-100" alt="Music Festival crowd" style="object-fit: cover;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title" data-key="event1_card_title">City Summer Fest</h5>
+                                    <p class="card-text text-muted" data-key="event1_card_desc">A three-day music festival featuring local bands.</p>
+                                    <p class="card-text">
+                                        <small class="text-danger" data-key="event1_card_date">🗓️ Date: July 20, 2025</small><br>
+                                        <small class="text-primary" data-key="event1_card_location">📍 Location: Central Park Arena</small>
+                                    </p>
+                                    <a href="/CityEventsGuide-Final/event.html" class="btn btn-sm btn-outline-primary" data-key="event_details_button">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 event-card" data-category="food" data-date="2025-08-05">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/CityEventsGuide-Final/images/food-fair.jpg" class="img-fluid rounded-start h-100" alt="People enjoying food at a fair" style="object-fit: cover;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title" data-key="event2_card_title">Global Food Fair</h5>
+                                    <p class="card-text text-muted" data-key="event2_card_desc">Taste diverse cuisines from around the world.</p>
+                                    <p class="card-text">
+                                        <small class="text-danger" data-key="event2_card_date">🗓️ Date: August 5, 2025</small><br>
+                                        <small class="text-primary" data-key="event2_card_location">📍 Location: Downtown Expo Center</small>
+                                    </p>
+                                    <a href="/CityEventsGuide-Final/event.html" class="btn btn-sm btn-outline-primary" data-key="event_details_button">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4 event-card" data-category="art" data-date="2025-09-15">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/CityEventsGuide-Final/images/art-exhibit.jpg" class="img-fluid rounded-start h-100" alt="Modern art exhibit" style="object-fit: cover;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title" data-key="event3_card_title">Modern Art Exhibition</h5>
+                                    <p class="card-text text-muted" data-key="event3_card_desc">Showcasing works from 20 emerging artists.</p>
+                                    <p class="card-text">
+                                        <small class="text-danger" data-key="event3_card_date">🗓️ Date: September 15, 2025</small><br>
+                                        <small class="text-primary" data-key="event3_card_location">📍 Location: City Museum of Arts</small>
+                                    </p>
+                                    <a href="/CityEventsGuide-Final/event.html" class="btn btn-sm btn-outline-primary" data-key="event_details_button">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4 event-card" data-category="sport" data-date="2025-10-01">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/CityEventsGuide-Final/images/marathon.jpg" class="img-fluid rounded-start h-100" alt="Runners in a city marathon" style="object-fit: cover;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title" data-key="event4_card_title">Annual City Marathon</h5>
+                                    <p class="card-text text-muted" data-key="event4_card_desc">Join the race for health and charity.</p>
+                                    <p class="card-text">
+                                        <small class="text-danger" data-key="event4_card_date">🗓️ Date: October 1, 2025</small><br>
+                                        <small class="text-primary" data-key="event4_card_location">📍 Location: City Harbor Route</small>
+                                    </p>
+                                    <a href="/CityEventsGuide-Final/event.html" class="btn btn-sm btn-outline-primary" data-key="event_details_button">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-1" data-key="footer_rights">&copy; 2025 City Events Guide. All rights reserved.</p>
+            <p class="mb-1" data-key="footer_contact_text">Contact us: <a href="mailto:info@cityevents.com" class="text-info">info@cityevents.com</a></p>
+            <p data-key="footer_follow_text">Follow us:
+                <a href="#" class="text-info me-2">Facebook</a>|
+                <a href="#" class="text-info me-2">Twitter</a>|
+                <a href="#" class="text-info">Instagram</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="/CityEventsGuide-Final/js/localization.js"></script>
+    <script src="/CityEventsGuide-Final/js/filter.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', initializeLanguage);
+    </script>
+</body>
+</html>
