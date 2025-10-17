@@ -28,7 +28,7 @@ body {
 }
 
 .bg-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/images/city-hero.jpg') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/city-hero.jpg') no-repeat center center;
     background-size: cover;
     color: white;
 }
@@ -114,3 +114,4 @@ main.container {
     min-height: 80vh;
     padding-top: 2rem;
 }
+
